@@ -6,6 +6,7 @@ import (
 	"net"
 	"net/http"
 
+	"github.com/Microsoft/go-winio"
 	portainer "github.com/portainer/portainer/api"
 )
 

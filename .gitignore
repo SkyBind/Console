@@ -1,7 +1,15 @@
 node_modules
 bower_components
-dist
+dist/
 portainer-checksum.txt
-api/cmd/portainer/portainer*
 .tmp
 .vscode
+.gitignore
+build/
+distribution/
+build.sh
+.codeclimate.yml
+.dockerignore
+.godir
+gruntfile.js
+yarn.lock

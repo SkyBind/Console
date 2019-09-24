@@ -1,67 +1,45 @@
-<p align="center">
-  <img title="portainer" src='https://github.com/portainer/portainer/blob/develop/assets/images/logo_alt.png?raw=true' />
-</p>
+## Project Description
 
-[![Docker Pulls](https://img.shields.io/docker/pulls/portainer/portainer.svg)](https://hub.docker.com/r/portainer/portainer/)
-[![Microbadger](https://images.microbadger.com/badges/image/portainer/portainer.svg)](http://microbadger.com/images/portainer/portainer "Image size")
-[![Documentation Status](https://readthedocs.org/projects/portainer/badge/?version=stable)](http://portainer.readthedocs.io/en/stable/?badge=stable)
-[![Build Status](https://portainer.visualstudio.com/Portainer%20CI/_apis/build/status/Portainer%20CI?branchName=develop)](https://portainer.visualstudio.com/Portainer%20CI/_build/latest?definitionId=3&branchName=develop)
-[![Code Climate](https://codeclimate.com/github/portainer/portainer/badges/gpa.svg)](https://codeclimate.com/github/portainer/portainer)
-[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=YHXZJQNJQ36H6)
+SkyBind(TM) Console extends Portainer to create a simple, general-purpose console for managing micro-sites (small purpose-built websites).
 
-**_Portainer_** is a lightweight management UI which allows you to **easily** manage your different Docker environments (Docker hosts or Swarm clusters).
-**_Portainer_** is meant to be as **simple** to deploy as it is to use. It consists of a single container that can run on any Docker engine (can be deployed as Linux container or a Windows native container, supports other platforms too).
-**_Portainer_** allows you to manage your all your Docker resources (containers, images, volumes, networks and more) ! It is compatible with the *standalone Docker* engine and with *Docker Swarm mode*.
+## Project Scope
 
-## Demo
+### 1) VM Management:
+ 
+Sample features: Start VM, Restart VM, Stop VM.
 
-You can try out the public demo instance: http://demo.portainer.io/ (login with the username **admin** and the password **tryportainer**).
+NOTE: Simplicity is a core value so a feature-complete cross-cloud console is out of scope for this project. Cloud-specific consoles should continue to be relied on for features that are out-of-scope for the SkyBind(TM) Console. 
 
-Please note that the public demo cluster is **reset every 15min**.
+### 2) Tenant / Site Management:
 
-Alternatively, you can deploy a copy of the demo stack inside a [play-with-docker (PWD)](https://labs.play-with-docker.com) playground:
+ Sample features: Create | Edit | Delete Tenant Site.
 
-- Browse [PWD/?stack=portainer-demo/play-with-docker/docker-stack.yml](http://play-with-docker.com/?stack=https://raw.githubusercontent.com/portainer/portainer-demo/master/play-with-docker/docker-stack.yml)
-- Sign in with your [Docker ID](https://docs.docker.com/docker-id)
-- Follow [these](https://github.com/portainer/portainer-demo/blob/master/play-with-docker/docker-stack.yml#L5-L8) steps.
+## Operating Vision
 
-Unlike the public demo, the playground sessions are deleted after 4 hours. Apart from that, all the settings are same, including default credentials.
+We believe in contributing to the growth of great open source projects rather than diluting the open source pool by forking a totally new initiative. If the Portainer Management team like the added SkyBind(TM) Console functionality and see it as in-scope for the Portainer vision then it will be backported to Portainer and this project will evolve to operate as a new Portainer feature incubator. In either case, this project is intending to be a long-term incremental investment in an open source Micro-site Console.
 
-## Getting started
+## Repository Management
 
-* [Deploy Portainer](https://portainer.readthedocs.io/en/latest/deployment.html)
-* [Documentation](https://portainer.readthedocs.io)
+This repository will be managed as a two-way branch of the Portainer master branch to facilitate backporting of bug fixes and enhancements that the Portainer Management team would like to add to Portainer. To facilitate this bi-directionality, enhancements will be isolated to new files and new folders where feasible.
 
-## Getting help
+This repository will be synchronised with Portainer after every major release to the Portainer master branch.
 
-**NOTE**: You can find more information about Portainer support framework policy here: https://www.portainer.io/2019/04/portainer-support-policy/
+NOTE1: This SkyBind(TM) fork of Portainer is synchronised with the Portainer master branch not the Portainer development branch so there may be new Portainer features visible to Portainer developers that are not visible to SkyBind(TM) Console developers.
 
-* Issues: https://github.com/portainer/portainer/issues
-* FAQ: https://portainer.readthedocs.io/en/latest/faq.html
-* Slack (chat): https://portainer.io/slack/
+NOTE2: The Portainer Build files & directories have not been retained in this fork. For simplicity our preference is to build without using Grunt and Yarn.
 
-## Reporting bugs and contributing
+NOTE3: The Portainer API directory has not been retained in this fork at this time to simplify the initial build. The API will be added back in after release 1.0.
 
-* Want to report a bug or request a feature? Please open [an issue](https://github.com/portainer/portainer/issues/new).
-* Want to help us build **_portainer_**? Follow our [contribution guidelines](https://portainer.readthedocs.io/en/latest/contribute.html) to build it  locally and make a pull request. We need all the help we can get!
+## Contributions
 
-## Limitations
-
-**_Portainer_** has full support for the following Docker versions:
-
-* Docker 1.10 to the latest version
-* Standalone Docker Swarm >= 1.2.3 _(**NOTE:** Use of Standalone Docker Swarm is being discouraged since the introduction of built-in Swarm Mode in Docker. While older versions of Portainer had support for Standalone Docker Swarm, Portainer 1.17.0 and newer **do not** support it. However, the built-in Swarm Mode of Docker is fully supported.)_
-
-Partial support for the following Docker versions (some features may not be available):
-
-* Docker 1.9
+This project will not be open for contributions until the first major release which is expected to be 20 December 2019. Work-in-progress will be made visible on a caveat-emptor basis on the skybind-master branch until release 1.0 at which time a skybind-development branch will become the home for future updates.
 
 ## Licensing
 
-Portainer is licensed under the zlib license. See [LICENSE](./LICENSE) for reference.
+SkyBind(TM) Console / Portainer is licensed under the zlib license. See [LICENSE](./LICENSE) for reference.
 
-Portainer also contains the following code, which is licensed under the [MIT license](https://opensource.org/licenses/MIT):
+SkyBind(TM) Console / Portainer also contains the following code, which is licensed under the [MIT license](https://opensource.org/licenses/MIT):
 
-UI For Docker: Copyright (c) 2013-2016 Michael Crosby (crosbymichael.com), Kevan Ahlquist (kevanahlquist.com), Anthony Lapenna (portainer.io)
+- UI For Docker: Copyright (c) 2013-2016 Michael Crosby (crosbymichael.com), Kevan Ahlquist (kevanahlquist.com), Anthony Lapenna (portainer.io)
 
-rdash-angular: Copyright (c) [2014] [Elliot Hesp]
+- rdash-angular: Copyright (c) [2014] [Elliot Hesp]
